@@ -1,0 +1,55 @@
+/***** BASE STYLE *****/
+
+html {
+    font-size: 12px;
+}
+
+body {
+    background-color: #DAF7F6;
+    color: #3B3B3B;
+    font-family: 'Open Sans';
+    font-size: 1em;
+    line-height: 16px;
+}
+
+/***** HEADER *****/
+
+header {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+h1 {
+    color: #F16059;
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-size: 1.66em;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+header img {
+    margin: 0 10px;
+    width: 21.5px;
+}
+
+/***** DESKTOP *****/
+
+@media (min-width: 1024px) {
+    
+    /***** HEADER *****/
+
+    h1 {
+        font-size: 4em;
+    }
+
+    header img {
+        margin: 0 20px;
+        width: 43px;
+    }
+}
