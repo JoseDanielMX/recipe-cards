@@ -1,5 +1,11 @@
 /***** BASE STYLE *****/
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html {
     font-size: 12px;
 }
@@ -7,9 +13,12 @@ html {
 body {
     background-color: #DAF7F6;
     color: #3B3B3B;
+    display: grid;
     font-family: 'Open Sans';
     font-size: 1em;
+    grid-template-columns: repeat(16, 1fr);
     line-height: 16px;
+    margin: 0;
 }
 
 /***** HEADER *****/
@@ -19,6 +28,7 @@ header {
     background-color: #fff;
     display: flex;
     flex-flow: row wrap;
+    grid-column: 1 / -1;
     justify-content: center;
     padding: 20px 0;
 }
@@ -38,6 +48,40 @@ header img {
     width: 21.5px;
 }
 
+/***** RECIPES *****/
+
+main {
+    grid-column: 2 / -2;
+    margin: 25px 0;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.image {
+    flex: 1;
+}
+
+.image > img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.recipe {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 32px;
+}
+
 /***** DESKTOP *****/
 
 @media (min-width: 1024px) {
@@ -52,4 +96,23 @@ header img {
         margin: 0 20px;
         width: 43px;
     }
+
+    /***** RECIPËS *****/
+
+    main {
+        margin: 35px 0;
+    }
+    
+    .card {
+        flex-direction: row;
+    }
+
+    .card:nth-child(2n) {
+        flex-direction: row-reverse;
+    }
+
+    .recipe {
+        padding: 40px;
+    }
+
 }
