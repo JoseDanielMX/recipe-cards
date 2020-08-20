@@ -64,6 +64,12 @@ main {
     width: 100%;
 }
 
+.columns {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
 .image {
     flex: 1;
 }
@@ -74,12 +80,64 @@ main {
     width: 100%;
 }
 
+.recipe ol, .recipe ul {
+    line-height: 25px;
+    padding-left: 15px;
+}
+
+.recipe ul {
+    list-style-type: square;
+}
+
 .recipe {
     display: flex;
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 32px;
+    padding: 10px 32px;
+}
+
+.recipe h2 {
+    color: #F16059;
+    font-family: 'Montserrat';
+    font-size: 1.33em;
+    font-weight: bold;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.recipe h3 {
+    color: #F16059;
+    border: 1px #3B3B3B;
+    border-style: solid none;
+    font-size: 1.166em;
+    font-weight: bold;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.time {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+
+.time div {
+    align-items: center;
+    border: 1px solid #3B3B3B;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.time img {
+    height: auto;
+    margin: 0 5px 0 0;
+    width: 15px;
 }
 
 /***** DESKTOP *****/
@@ -111,8 +169,41 @@ main {
         flex-direction: row-reverse;
     }
 
+    .columns {
+        flex-flow: row;
+    }
+    
+    .directions {
+        width: 65%;
+    }
+
+    .ingredients {
+        box-sizing: border-box;
+        margin-right: 15px;
+        width: 35%;
+    }
+    
     .recipe {
         padding: 40px;
+    }
+
+    .recipe h2 {
+        font-size: 2em;
+    }
+
+    .time {
+        border: 1px solid #3B3B3B;
+        justify-content: center;
+    }
+
+    .time .cook {
+        border: 1px #3B3B3B;
+        border-style: none solid;
+    }
+
+    .time div {
+        border: none;
+        margin: 0;
     }
 
 }
