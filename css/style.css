@@ -50,6 +50,16 @@ header img {
 
 /***** RECIPES *****/
 
+.cook, .prep, .total {
+    border: 1px solid #3B3B3B;
+    transition: all 0.5s ease-in-out;
+}
+
+.cook:hover, .prep:hover, .total:hover {
+    background-color: #3B3B3B;
+    color: #fff;
+}
+
 main {
     grid-column: 2 / -2;
     margin: 25px 0;
@@ -126,8 +136,6 @@ main {
 
 .time div {
     align-items: center;
-    border: 1px solid #3B3B3B;
-    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
     margin: 10px 0;
@@ -191,18 +199,21 @@ main {
         font-size: 2em;
     }
 
+}
+
+@media (min-width: 1200px) {
+
+    /***** RECIPËS *****/
+
+    .cook {
+        border-style: solid none;
+    }
+
     .time {
-        border: 1px solid #3B3B3B;
         justify-content: center;
     }
 
-    .time .cook {
-        border: 1px #3B3B3B;
-        border-style: none solid;
-    }
-
     .time div {
-        border: none;
         margin: 0;
     }
 
